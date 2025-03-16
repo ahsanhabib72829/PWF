@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
     <script>
-      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.classList.add('dark');
-      } else {
-          document.documentElement.classList.remove('dark')
-      }
+   // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark')
+    }
   </script>
 
 
@@ -22,7 +23,8 @@
 <body class="">
   <!-- ///////////////////////dark btn start //////////////// 
  ////////////////////////////////////////////////////-->
-      <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+
+      <button id="theme-toggle " type="button" class="hidden lg:block  text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
         <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
         <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
     </button>
@@ -31,32 +33,50 @@
 
                     <!-- nav start ////////////////
                     //////////////////////////// -->
+                   
 
-        <nav class="bg-white border-gray-200 dark:bg-gray-900">
-            <div class="max-w-screen-xl mx-auto p-4">
+        <nav class="bg-white border-gray-200 dark:bg-gray-900 fixed top-0 left-0 w-full z-50 ">
+            <div class="max-w-screen-xl mx-auto p-4 ">
               <div class="grid grid-cols-1 md:grid-cols-3 items-center justify-between">
                 <div class="flex items-center space-x-3 rtl:space-x-reverse">
                   <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="Jpg (7).jpg" class="h-8" alt="Flowbite Logo" />
-                    <span class="self-center sm:text-[10px] md:text-[12px] lg:text-[20px]  font-semibold whitespace-nowrap dark:text-white">purboshattyWF</span>
+                    <img src="/logo/Jpg.jpg" class="h-8" alt="Flowbite Logo" />
+                    <span class="self-center sm:text-[10px] md:text-[12px] lg:text-[18px]  font-semibold whitespace-nowrap dark:text-white">purboshattyWF</span>
                   </a>
                 </div>
           
-                <div class="hidden md:flex justify-center">
-                  <ul class="font-medium flex space-x-8 rtl:space-x-reverse">
+                <div class="hidden md:flex justify-center  ">
+                  <ul class="font-medium flex space-x-8 rtl:space-x-reverse  whitespace-nowrap "> 
                     <li>
                       <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Home</a>
                     </li>
-                    <li>
+                   <li>
                       <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">About</a>
                     </li>
                     <li>
-                      <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Services</a>
+                      <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Our mission</a>
                     </li>
                     <li>
-                      <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Contact</a>
+                      <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Our vision</a>
                     </li>
+                    
+                    <li>
+                      <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">What we Do
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Volunteer
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Gallery
+                      </a>
+                    </li>
+                   
                   </ul>
+                    
+
+                  
                 </div>
           
                 <div class="flex justify-end md:justify-end items-center space-x-4">
@@ -69,6 +89,11 @@
                     <option value="en">EN</option>
                     <option value="fr">BD</option>
                   </select>
+
+
+                
+                
+                
           
                   <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
                     <!-- <span class="sr-only">Open main menu</span> -->
@@ -98,116 +123,89 @@
     <!-- nav end //////////////////
     //////////////////////// -->
 
-    
     <!-- carousel START ////////////
      ///////////////////// -->
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
-  <!-- Carousel wrapper -->
-  <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-       <!-- Item 1 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="carucel-pic/1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 2 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="carucel-pic/2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 3 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="carucel-pic/3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 4 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="carucel-pic/4.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 5 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="carucel-pic/5.jpg" class=" absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 6 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-        <img src="Jpg (7).jpg" class=" absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-    </div>
-  </div>
-  <!-- Slider indicators -->
-  <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-  </div>
-  <!-- Slider controls -->
-  <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-          </svg>
-          <span class="sr-only">Previous</span>
-      </span>
-  </button>
-  <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-          </svg>
-          <span class="sr-only">Next</span>
-      </span>
-  </button>
+   
+
+     <div class="relative w-full overflow-hidden rounded-lg 
+     h-40 xs:h-48 sm:h-56 md:h-72 lg:h-96 xl:h-[500px]">
+<!-- Images -->
+<div class="carousel-item absolute inset-0 hidden">
+<img src="/carucel-pic/1.jpg" class="w-full h-full object-cover top-0 left-0" alt="Image 1">
 </div>
+<div class="carousel-item absolute inset-0 hidden">
+<img src="/carucel-pic/2.jpg" class="w-full h-full object-cover top-0 left-0" alt="Image 2">
+</div>
+<div class="carousel-item absolute inset-0 hidden">
+<img src="/carucel-pic/3.jpg" class="w-full h-full object-cover top-0 left-0" alt="Image 3">
+</div>
+<div class="carousel-item absolute inset-0 hidden">
+<img src="/carucel-pic/4.jpg" class="w-full h-full object-cover top-0 left-0" alt="Image 4">
+</div>
+<div class="carousel-item absolute inset-0 hidden">
+<img src="/carucel-pic/5.jpg" class="w-full h-full object-cover top-0 left-0" alt="Image 5">
+</div>
+</div>
+
+<!-- Buttons -->
+<button id="prev" class="absolute top-1/2 left-4 z-10 bg-gray-800/50 text-white p-2 rounded-full">
+❮
+</button>
+<button id="next" class="absolute top-1/2 right-4 z-10 bg-gray-800/50 text-white p-2 rounded-full">
+❯
+</button>
+
+  
 <!-- carousel end ///////////////////////
  //////////////////// -->
 
+<!--live notice board start  -->
+<marquee class="mt-4" scrollamount="7" scrolldelay="100">
+  <span style="font-size:2em; font-family: Verdana; color: #BC8F8F; font-weight: bold;">
+    ২০২৫ রোজ শুক্রবার বিকাল ৩ তিন ঘটিকায়  "মিলন মেলা" ও "কার্যনির্বাহী পরিষদ" ঘোষণা অনুষ্ঠান এর আয়োজন করা হয়েছে
+  </span>
+</marquee>
+<!-- live notice board end   -->
 
- <h1 class="text-gray-400 text-center lg:text-[50px] p-4">body iteme</h1>
- <img src="/carucel-pic/1.jpg" alt="">
+ <!-- all notice box info  start  -->
+<div class="flex flex-col gap-20 lg:flex-row lg:gap-12">
+  <div class="basis-5/12">
+    <div class="rounded-lg border bg-card p-4 shadow sm:p-6">
+      <div class="flex items-center justify-between"><h3 class="text-lg font-bold sm:text-xl md:text-3xl">নোটিশ বোর্ড</h3><a class="group flex items-center font-semibold hover:text-primary hover:underline md:text-lg" href="/notices">সকল নোটিশ<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right ml-2 size-4 transition duration-300 group-hover:translate-x-2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+      </div>
+      <div class="mt-6 grid gap-8">
+        <a class="group" href="/notice-board-file/program badda.png" target="_blank">
+        <div class="rounded-lg text-card-foreground border-0 bg-inherit shadow-none">
+          <div class="p-0">
+            <div class="flex gap-3">
+              <div class="flex-1 space-y-2"><span class="text-sm font-semibold text-primary">21 Feb 2025</span><h3 class="line-clamp-1 font-semibold underline-offset-1 group-hover:underline md:text-xl">২০২৫ বিকাল ৩ তিন ঘটিকায়  "মিলন মেলা" ও "কার্যনির্বাহী পরিষদ" ঘোষণা অনুষ্ঠান  </h3>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a class="group" href="/">
+      <div class="rounded-lg text-card-foreground border-0 bg-inherit shadow-none">
+        <div class="p-0">
+          <div class="flex gap-3">
+            <div class="flex-1 space-y-2"><span class="text-sm font-semibold text-primary">15 Sep 2024</span><h3 class="line-clamp-1 font-semibold underline-offset-1 group-hover:underline md:text-xl">২০২৪ সালের বৃত্তি কার্যক্রম </h3>
+            </div>
+        </div>
+      </div>
+      </div>
+    </a>
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- all notice box info  end -->
+
+
+
+<!-- script flowbite link  -->
         <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-        
-                          <!-- dark ///////////
-                          ///////////////////// -->
-
-        <script>
-          var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-    var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-
-    // Change the icons inside the button based on previous settings
-    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        themeToggleLightIcon.classList.remove('hidden');
-    } else {
-        themeToggleDarkIcon.classList.remove('hidden');
-    }
-
-    var themeToggleBtn = document.getElementById('theme-toggle');
-
-    themeToggleBtn.addEventListener('click', function() {
-
-        // toggle icons inside button
-        themeToggleDarkIcon.classList.toggle('hidden');
-        themeToggleLightIcon.classList.toggle('hidden');
-
-        // if set via local storage previously
-        if (localStorage.getItem('color-theme')) {
-            if (localStorage.getItem('color-theme') === 'light') {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('color-theme', 'dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('color-theme', 'light');
-            }
-
-        // if NOT set via local storage previously
-        } else {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('color-theme', 'light');
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('color-theme', 'dark');
-            }
-        }
-        
-    });
-        </script>
-    
+    <!-- exteranal js link  -->
+        <script src="/script.js"></script>
 </body>
 </html>

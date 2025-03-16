@@ -1,0 +1,17 @@
+element.style {
+}
+.rounded-lg.border.bg-card.p-4.shadow.sm\:p-6 {
+}
+.rounded-lg.border.bg-card.p-4.shadow.sm\:p-6 {
+}
+.rounded-lg.border.bg-card.p-4.shadow.sm\:p-6 {
+}
+.rounded-lg.border.bg-card.p-4.shadow.sm\:p-6 {
+}
+.rounded-lg.border.bg-card.p-4.shadow.sm\:p-6 {
+}
+@media (min-width: 640px) {
+    .sm\:p-6 {
+        padding: 1.5rem;
+    }
+}
