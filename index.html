@@ -33,9 +33,9 @@
 
                     <!-- nav start ////////////////
                     //////////////////////////// -->
-                   
+                    <!-- z-50  fixed top-0 left-0 w-full m-[30px]-->
 
-        <nav class="bg-white border-gray-200 dark:bg-gray-900 fixed top-0 left-0 w-full z-50 ">
+        <nav class="bg-white border-gray-200 dark:bg-gray-900 fixed top-0 w-full z-50 shadow-lg ">
             <div class="max-w-screen-xl mx-auto p-4 ">
               <div class="grid grid-cols-1 md:grid-cols-3 items-center justify-between">
                 <div class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -96,7 +96,7 @@
                 
           
                   <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-                    <!-- <span class="sr-only">Open main menu</span> -->
+                    <span class="sr-only">Open main menu</span>
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
                     </svg>
@@ -119,43 +119,48 @@
                   <li>
                     <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Contact
 
-          </nav>        
+          </nav> 
+          
+          
     <!-- nav end //////////////////
     //////////////////////// -->
 
     <!-- carousel START ////////////
      ///////////////////// -->
    
-
-     <div class="relative w-full overflow-hidden rounded-lg 
-     h-40 xs:h-48 sm:h-56 md:h-72 lg:h-96 xl:h-[500px]">
-<!-- Images -->
-<div class="carousel-item absolute inset-0 hidden">
-<img src="/carucel-pic/1.jpg" class="w-full h-full object-cover top-0 left-0" alt="Image 1">
-</div>
-<div class="carousel-item absolute inset-0 hidden">
-<img src="/carucel-pic/2.jpg" class="w-full h-full object-cover top-0 left-0" alt="Image 2">
-</div>
-<div class="carousel-item absolute inset-0 hidden">
-<img src="/carucel-pic/3.jpg" class="w-full h-full object-cover top-0 left-0" alt="Image 3">
-</div>
-<div class="carousel-item absolute inset-0 hidden">
-<img src="/carucel-pic/4.jpg" class="w-full h-full object-cover top-0 left-0" alt="Image 4">
-</div>
-<div class="carousel-item absolute inset-0 hidden">
-<img src="/carucel-pic/5.jpg" class="w-full h-full object-cover top-0 left-0" alt="Image 5">
-</div>
-</div>
-
-<!-- Buttons -->
-<button id="prev" class="absolute top-1/2 left-4 z-10 bg-gray-800/50 text-white p-2 rounded-full">
-❮
-</button>
-<button id="next" class="absolute top-1/2 right-4 z-10 bg-gray-800/50 text-white p-2 rounded-full">
-❯
-</button>
-
-  
+     <div class="relative w-full overflow-hidden rounded-lg mt-[40px]">
+      <!-- Carousel Wrapper -->
+      <div class="relative h-56 sm:h-64 md:h-80 lg:h-96 xl:h-[500px]">
+        <!-- Slide 1 -->
+        <div class="carousel-item absolute inset-0 hidden">
+          <img src="/carucel-pic/1.jpg" class="w-full h-full object-cover" alt="Image 1">
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item absolute inset-0 hidden">
+          <img src="/carucel-pic/2.jpg" class="w-full h-full object-cover" alt="Image 2">
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item absolute inset-0 hidden">
+          <img src="/carucel-pic/3.jpg" class="w-full h-full object-cover" alt="Image 3">
+        </div>
+        <!-- Slide 4 -->
+        <div class="carousel-item absolute inset-0 hidden">
+          <img src="/carucel-pic/4.jpg" class="w-full h-full object-cover" alt="Image 4">
+        </div>
+        <!-- Slide 5 -->
+        <div class="carousel-item absolute inset-0 hidden">
+          <img src="/carucel-pic/5.jpg" class="w-full h-full object-cover" alt="Image 5">
+        </div>
+      </div>
+    
+      <!-- Controls -->
+      <button id="prev" class="absolute top-1/2 left-4 z-10 bg-gray-800/50 text-white p-2 rounded-full">
+        ❮
+      </button>
+      <button id="next" class="absolute top-1/2 right-4 z-10 bg-gray-800/50 text-white p-2 rounded-full">
+        ❯
+      </button>
+    </div>
 <!-- carousel end ///////////////////////
  //////////////////// -->
 
