@@ -75,7 +75,7 @@
             startAutoSlide();
         }
     
-        // Add event listeners
+        // Event Listeners for Buttons
         document.getElementById("next").addEventListener("click", function () {
             nextSlide();
             resetInterval();
