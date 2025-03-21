@@ -47,7 +47,9 @@
     // carousel START ////////
     document.addEventListener("DOMContentLoaded", function () {
         const items = document.querySelectorAll(".carousel-item");
+        const totalSlides = items.length;
         let index = 0;
+        let interval;
     
         function showSlide(i) {
             items.forEach((item, idx) => {
@@ -56,19 +58,39 @@
         }
     
         function nextSlide() {
-            index = (index + 1) % items.length;
+            index = (index + 1) % totalSlides;
             showSlide(index);
         }
     
-        document.getElementById("next").addEventListener("click", nextSlide);
-        document.getElementById("prev").addEventListener("click", function () {
-            index = (index - 1 + items.length) % items.length;
+        function prevSlide() {
+            index = (index - 1 + totalSlides) % totalSlides;
             showSlide(index);
+        }
+    
+        // Event listeners
+        document.getElementById("next").addEventListener("click", function () {
+            nextSlide();
+            resetInterval();
+        });
+    
+        document.getElementById("prev").addEventListener("click", function () {
+            prevSlide();
+            resetInterval();
         });
     
         // Auto-change every 3 seconds
-        setInterval(nextSlide, 3000);
+        function startAutoSlide() {
+            interval = setInterval(nextSlide, 3000);
+        }
+    
+        function resetInterval() {
+            clearInterval(interval);
+            startAutoSlide();
+        }
+    
         showSlide(index);
+        startAutoSlide();
     });
+    
     // carousel START end/////
  
