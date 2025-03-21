@@ -47,7 +47,6 @@
     // carousel START ////////
     document.addEventListener("DOMContentLoaded", function () {
         const items = document.querySelectorAll(".carousel-item");
-        const totalSlides = items.length;
         let index = 0;
         let interval;
     
@@ -58,16 +57,25 @@
         }
     
         function nextSlide() {
-            index = (index + 1) % totalSlides;
+            index = (index + 1) % items.length;
             showSlide(index);
         }
     
         function prevSlide() {
-            index = (index - 1 + totalSlides) % totalSlides;
+            index = (index - 1 + items.length) % items.length;
             showSlide(index);
         }
     
-        // Event listeners
+        function startAutoSlide() {
+            interval = setInterval(nextSlide, 3000);
+        }
+    
+        function resetInterval() {
+            clearInterval(interval);
+            startAutoSlide();
+        }
+    
+        // Add event listeners
         document.getElementById("next").addEventListener("click", function () {
             nextSlide();
             resetInterval();
@@ -78,19 +86,11 @@
             resetInterval();
         });
     
-        // Auto-change every 3 seconds
-        function startAutoSlide() {
-            interval = setInterval(nextSlide, 3000);
-        }
-    
-        function resetInterval() {
-            clearInterval(interval);
-            startAutoSlide();
-        }
-    
+        // Start carousel
         showSlide(index);
         startAutoSlide();
     });
+    
     
     // carousel START end/////
  
